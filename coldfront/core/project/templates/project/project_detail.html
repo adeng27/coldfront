@@ -160,6 +160,22 @@ Project Detail
           Purchase Service Units
         </a>
       {% endif %}
+      {% if request_secure_directories_visible %}
+        {% if request_secure_directories_clickable %}
+          <a
+              class="btn btn-success"
+              href=""
+              role="button">
+            <i class="fas fa-lock" aria-hidden="true"></i>
+            Request Secure Directories
+          </a>
+        {% else %}
+          <button type="button" class="btn btn-success" disabled>
+            <i class="fas fa-lock" aria-hidden="true"></i>
+            Request Secure Directories
+          </button>
+        {% endif %}
+      {% endif %}
     </div>
   </div>
   <div class="card-body">

@@ -257,15 +257,26 @@ class ProjectDetailView(LoginRequiredMixin, UserPassesTestMixin, DetailView):
         # not have pending/approved renewal requests.
         context['renew_allowance_current_clickable'] = (
             # Short-circuit if the button is not visible.
-                context['renew_allowance_current_visible'] and
-                is_any_project_pi_renewable(
-                    self.object, get_current_allocation_period()))
+            context['renew_allowance_current_visible'] and
+            is_any_project_pi_renewable(
+                self.object, get_current_allocation_period()))
 
         # Display the "Purchase Service Units" button for eligible allocation
         # types, for those allowed to update the project.
         context['purchase_sus_visible'] = (
             can_project_purchase_service_units(self.object) and
             context.get('is_allowed_to_update_project', False))
+
+        # Display the "Request Secure Directories" button for eligible
+        # allocation types.
+        context['request_secure_directories_visible'] = \
+            self.object.name.startswith('fc_')
+        # Only allow the "Request Secure Directories" button to be clickable if
+        # the Project does not already have pending/approved requests.
+        context['request_secure_directories_clickable'] = (
+            context['request_secure_directories_visible'] and
+            # TODO
+            True)
 
         return context
 
