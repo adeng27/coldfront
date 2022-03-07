@@ -1,34 +1,3 @@
-from django.urls import path
-
-import coldfront.core.project.views as project_views
-
-urlpatterns = [
-    path('<int:pk>/', project_views.ProjectDetailView.as_view(), name='project-detail'),
-    path('<int:pk>/archive', project_views.ProjectArchiveProjectView.as_view(), name='project-archive'),
-    path('', project_views.ProjectListView.as_view(), name='project-list'),
-    path('project-user-update-email-notification/', project_views.project_update_email_notification, name='project-user-update-email-notification'),
-    path('archived/', project_views.ProjectArchivedListView.as_view(), name='project-archived-list'),
-    path('create/', project_views.ProjectCreateView.as_view(), name='project-create'),
-    path('join/', project_views.ProjectJoinListView.as_view(), name='project-join-list'),
-    path('<int:pk>/update/', project_views.ProjectUpdateView.as_view(), name='project-update'),
-    path('<int:pk>/add-users-search/', project_views.ProjectAddUsersSearchView.as_view(), name='project-add-users-search'),
-    path('<int:pk>/add-users-search-results/', project_views.ProjectAddUsersSearchResultsView.as_view(), name='project-add-users-search-results'),
-    path('<int:pk>/add-users/', project_views.ProjectAddUsersView.as_view(), name='project-add-users'),
-    path('<int:pk>/user-detail/<int:project_user_pk>', project_views.ProjectUserDetail.as_view(), name='project-user-detail'),
-    path('<int:pk>/review/', project_views.ProjectReviewView.as_view(), name='project-review'),
-    path('<int:pk>/join/', project_views.ProjectJoinView.as_view(), name='project-join'),
-    path('<int:pk>/review-join-requests/', project_views.ProjectReviewJoinRequestsView.as_view(), name='project-review-join-requests'),
-    path('project-review-list', project_views.ProjectReviewListView.as_view(),name='project-review-list'),
-    path('project-review-complete/<int:project_review_pk>/', project_views.ProjectReviewCompleteView.as_view(),
-         name='project-review-complete'),
-    path('project-review/<int:pk>/email', project_views.ProjectReivewEmailView.as_view(), name='project-review-email'),
-    path('join-list/', project_views.ProjectJoinRequestListView.as_view(), name='project-join-request-list'),
-
-]
-
-
-# New Project Requests
-# TODO: Integrate this section with the rest.
 from coldfront.core.project.views import ProjectRequestView
 from coldfront.core.project.views import SavioProjectRequestDetailView
 from coldfront.core.project.views import SavioProjectRequestListView
@@ -52,10 +21,65 @@ from coldfront.core.project.views import VectorProjectRequestView
 from coldfront.core.project.views import VectorProjectReviewEligibilityView
 from coldfront.core.project.views import VectorProjectReviewSetupView
 from coldfront.core.project.views import VectorProjectUndenyRequestView
+from coldfront.core.project.views_.addition_views.approval_views import AllocationAdditionRequestDetailView
+from coldfront.core.project.views_.addition_views.approval_views import AllocationAdditionRequestListView
+from coldfront.core.project.views_.addition_views.approval_views import AllocationAdditionReviewDenyView
+from coldfront.core.project.views_.addition_views.approval_views import AllocationAdditionReviewMemorandumSignedView
+from coldfront.core.project.views_.addition_views.request_views import AllocationAdditionRequestLandingView
+from coldfront.core.project.views_.addition_views.request_views import AllocationAdditionRequestView
 import coldfront.core.project.views_.removal_views as removal_views
+from coldfront.core.project.views_.renewal_views.approval_views import AllocationRenewalRequestListView
+from coldfront.core.project.views_.renewal_views.approval_views import AllocationRenewalRequestDetailView
+from coldfront.core.project.views_.renewal_views.approval_views import AllocationRenewalRequestReviewDenyView
+from coldfront.core.project.views_.renewal_views.approval_views import AllocationRenewalRequestReviewEligibilityView
+# This is disabled because a PI may always make a new request.
+# from coldfront.core.project.views_.renewal_views.approval_views import AllocationRenewalRequestUndenyView
+from coldfront.core.project.views_.renewal_views.request_views import AllocationRenewalRequestUnderProjectView
+from coldfront.core.project.views_.renewal_views.request_views import AllocationRenewalRequestView
+
+from django.urls import path
 from django.views.generic import TemplateView
 
+import coldfront.core.project.views as project_views
 
+
+urlpatterns = [
+    path('<int:pk>/', project_views.ProjectDetailView.as_view(), name='project-detail'),
+    path('<int:pk>/archive', project_views.ProjectArchiveProjectView.as_view(), name='project-archive'),
+    path('', project_views.ProjectListView.as_view(), name='project-list'),
+    path('project-user-update-email-notification/', project_views.project_update_email_notification, name='project-user-update-email-notification'),
+    path('archived/', project_views.ProjectArchivedListView.as_view(), name='project-archived-list'),
+    path('create/', project_views.ProjectCreateView.as_view(), name='project-create'),
+    path('<int:pk>/update/', project_views.ProjectUpdateView.as_view(), name='project-update'),
+    path('<int:pk>/add-users-search/', project_views.ProjectAddUsersSearchView.as_view(), name='project-add-users-search'),
+    path('<int:pk>/add-users-search-results/', project_views.ProjectAddUsersSearchResultsView.as_view(), name='project-add-users-search-results'),
+    path('<int:pk>/add-users/', project_views.ProjectAddUsersView.as_view(), name='project-add-users'),
+    path('<int:pk>/user-detail/<int:project_user_pk>', project_views.ProjectUserDetail.as_view(), name='project-user-detail'),
+    path('<int:pk>/review/', project_views.ProjectReviewView.as_view(), name='project-review'),
+    path('project-review-list', project_views.ProjectReviewListView.as_view(),name='project-review-list'),
+    path('project-review-complete/<int:project_review_pk>/', project_views.ProjectReviewCompleteView.as_view(),
+         name='project-review-complete'),
+    path('project-review/<int:pk>/email', project_views.ProjectReivewEmailView.as_view(), name='project-review-email'),
+]
+
+
+# Project Join Requests
+urlpatterns += [
+    path('join/',
+         project_views.ProjectJoinListView.as_view(),
+         name='project-join-list'),
+    path('join-list/',
+         project_views.ProjectJoinRequestListView.as_view(),
+         name='project-join-request-list'),
+    path('<int:pk>/join/', project_views.ProjectJoinView.as_view(),
+         name='project-join'),
+    path('<int:pk>/review-join-requests/',
+         project_views.ProjectReviewJoinRequestsView.as_view(),
+         name='project-review-join-requests'),
+]
+
+
+# New Project Requests
 urlpatterns += [
     path('project-request/',
          ProjectRequestView.as_view(),
@@ -151,22 +175,12 @@ urlpatterns += [
          removal_views.ProjectRemovalRequestCompleteStatusView.as_view(),
          name='project-removal-request-complete-status'),
     path('<int:pk>/remove-users/',
-         removal_views.ProjectRemoveUsersView.as_view(), name='project-remove-users'),
+         removal_views.ProjectRemoveUsersView.as_view(),
+         name='project-remove-users'),
 ]
 
 
 # Allocation Renewal Requests
-# TODO: Integrate this section with the rest.
-from coldfront.core.project.views_.renewal_views.approval_views import AllocationRenewalRequestListView
-from coldfront.core.project.views_.renewal_views.approval_views import AllocationRenewalRequestDetailView
-from coldfront.core.project.views_.renewal_views.approval_views import AllocationRenewalRequestReviewDenyView
-from coldfront.core.project.views_.renewal_views.approval_views import AllocationRenewalRequestReviewEligibilityView
-# This is disabled because a PI may always make a new request.
-# from coldfront.core.project.views_.renewal_views.approval_views import AllocationRenewalRequestUndenyView
-from coldfront.core.project.views_.renewal_views.request_views import AllocationRenewalRequestUnderProjectView
-from coldfront.core.project.views_.renewal_views.request_views import AllocationRenewalRequestView
-
-
 urlpatterns += [
     path('<int:pk>/renew',
          AllocationRenewalRequestUnderProjectView.as_view(),
@@ -199,20 +213,10 @@ urlpatterns += [
     # path('pi-allocation-renewal-request/<int:pk>/undeny/',
     #      AllocationRenewalRequestUndenyView.as_view(),
     #      name='pi-allocation-renewal-request-review-undeny'),
-
 ]
 
 
-# Purchase Service Units
-# TODO: Integrate this section with the rest.
-from coldfront.core.project.views_.addition_views.approval_views import AllocationAdditionRequestDetailView
-from coldfront.core.project.views_.addition_views.approval_views import AllocationAdditionRequestListView
-from coldfront.core.project.views_.addition_views.approval_views import AllocationAdditionReviewDenyView
-from coldfront.core.project.views_.addition_views.approval_views import AllocationAdditionReviewMemorandumSignedView
-from coldfront.core.project.views_.addition_views.request_views import AllocationAdditionRequestLandingView
-from coldfront.core.project.views_.addition_views.request_views import AllocationAdditionRequestView
-
-
+# Purchase Service Units Requests
 urlpatterns += [
     path('<int:pk>/purchase-service-units-landing/',
          AllocationAdditionRequestLandingView.as_view(),
