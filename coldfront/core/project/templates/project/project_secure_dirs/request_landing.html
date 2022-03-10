@@ -1,0 +1,18 @@
+{% extends "common/base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+
+{% block title %}
+Request Secure Directories
+{% endblock %}
+
+
+{% block content %}
+<h1>Request Secure Directories under {{ project.name }}</h1><hr>
+
+<p>
+  Project {{ project.name }} is eligible to request access to
+</p>
+
+{% endblock %}

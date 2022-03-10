@@ -164,7 +164,7 @@ Project Detail
         {% if request_secure_directories_clickable %}
           <a
               class="btn btn-success"
-              href=""
+              href="{% url 'project-request-secure-dirs-landing' project.pk %}"
               role="button">
             <i class="fas fa-lock" aria-hidden="true"></i>
             Request Secure Directories

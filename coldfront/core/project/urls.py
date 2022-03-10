@@ -21,13 +21,16 @@ from coldfront.core.project.views import VectorProjectRequestView
 from coldfront.core.project.views import VectorProjectReviewEligibilityView
 from coldfront.core.project.views import VectorProjectReviewSetupView
 from coldfront.core.project.views import VectorProjectUndenyRequestView
+
 from coldfront.core.project.views_.addition_views.approval_views import AllocationAdditionRequestDetailView
 from coldfront.core.project.views_.addition_views.approval_views import AllocationAdditionRequestListView
 from coldfront.core.project.views_.addition_views.approval_views import AllocationAdditionReviewDenyView
 from coldfront.core.project.views_.addition_views.approval_views import AllocationAdditionReviewMemorandumSignedView
 from coldfront.core.project.views_.addition_views.request_views import AllocationAdditionRequestLandingView
 from coldfront.core.project.views_.addition_views.request_views import AllocationAdditionRequestView
+
 import coldfront.core.project.views_.removal_views as removal_views
+
 from coldfront.core.project.views_.renewal_views.approval_views import AllocationRenewalRequestListView
 from coldfront.core.project.views_.renewal_views.approval_views import AllocationRenewalRequestDetailView
 from coldfront.core.project.views_.renewal_views.approval_views import AllocationRenewalRequestReviewDenyView
@@ -36,6 +39,9 @@ from coldfront.core.project.views_.renewal_views.approval_views import Allocatio
 # from coldfront.core.project.views_.renewal_views.approval_views import AllocationRenewalRequestUndenyView
 from coldfront.core.project.views_.renewal_views.request_views import AllocationRenewalRequestUnderProjectView
 from coldfront.core.project.views_.renewal_views.request_views import AllocationRenewalRequestView
+
+from coldfront.core.project.views_.secure_dirs_views.request_views import SecureDirectoriesRequestLandingView
+from coldfront.core.project.views_.secure_dirs_views.request_views import SecureDirectoriesRequestView
 
 from django.urls import path
 from django.views.generic import TemplateView
@@ -239,4 +245,15 @@ urlpatterns += [
     path('service-units-purchase-request/<int:pk>/deny',
          AllocationAdditionReviewDenyView.as_view(),
          name='service-units-purchase-request-review-deny'),
+]
+
+
+# Secure Directories Requests
+urlpatterns += [
+    path('<int:pk>/request-secure-dirs-landing/',
+         SecureDirectoriesRequestLandingView.as_view(),
+         name='project-request-secure-dirs-landing'),
+    # path('<int:pk>/request-secure-dirs/',
+    #      SecureDirectoriesRequestView.as_view(),
+    #      name='project-request-secure-dirs'),
 ]
