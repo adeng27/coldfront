@@ -38,7 +38,8 @@ INSTALLED_APPS += [
     'django_q',
     'simple_history',
     'durationwidget',
-    'phonenumber_field'
+    'phonenumber_field',
+    'docs',
 ]
 
 # ColdFront Apps
@@ -165,6 +166,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'coldfront/static'),
 ]
+
+DOCS_ROOT = os.path.join(BASE_DIR, 'sphinx_docs/_build/html')
+DOCS_ACCESS = 'superuser'
 
 # Add local site static files
 if os.path.isdir(os.path.join(BASE_DIR, 'site/static')):
