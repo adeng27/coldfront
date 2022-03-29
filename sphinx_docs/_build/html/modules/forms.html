@@ -1,0 +1,830 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Forms &#8212; Coldfront  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="module-coldfront.core.project.forms">
+<span id="forms"></span><h1>Forms<a class="headerlink" href="#module-coldfront.core.project.forms" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.DisabledChoicesSelectWidget">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">coldfront.core.project.forms.</span></span><span class="sig-name descname"><span class="pre">DisabledChoicesSelectWidget</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldfront.core.project.forms.DisabledChoicesSelectWidget" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.DisabledChoicesSelectWidget.create_option">
+<span class="sig-name descname"><span class="pre">create_option</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subindex</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldfront.core.project.forms.DisabledChoicesSelectWidget.create_option" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.DisabledChoicesSelectWidget.media">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#coldfront.core.project.forms.DisabledChoicesSelectWidget.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.JoinRequestSearchForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">coldfront.core.project.forms.</span></span><span class="sig-name descname"><span class="pre">JoinRequestSearchForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">files=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_id='id_%s'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_class=&lt;class</span> <span class="pre">'django.forms.utils.ErrorList'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_suffix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_permitted=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field_order=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_required_attribute=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">renderer=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldfront.core.project.forms.JoinRequestSearchForm" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.JoinRequestSearchForm.base_fields">
+<span class="sig-name descname"><span class="pre">base_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'email':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'project_name':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'username':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#coldfront.core.project.forms.JoinRequestSearchForm.base_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.JoinRequestSearchForm.declared_fields">
+<span class="sig-name descname"><span class="pre">declared_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'email':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'project_name':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'username':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#coldfront.core.project.forms.JoinRequestSearchForm.declared_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.JoinRequestSearchForm.media">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#coldfront.core.project.forms.JoinRequestSearchForm.media" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all media required to render the widgets on this form.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.MemorandumSignedForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">coldfront.core.project.forms.</span></span><span class="sig-name descname"><span class="pre">MemorandumSignedForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">files=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_id='id_%s'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_class=&lt;class</span> <span class="pre">'django.forms.utils.ErrorList'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_suffix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_permitted=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field_order=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_required_attribute=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">renderer=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldfront.core.project.forms.MemorandumSignedForm" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.MemorandumSignedForm.base_fields">
+<span class="sig-name descname"><span class="pre">base_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'status':</span> <span class="pre">&lt;django.forms.fields.ChoiceField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#coldfront.core.project.forms.MemorandumSignedForm.base_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.MemorandumSignedForm.declared_fields">
+<span class="sig-name descname"><span class="pre">declared_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'status':</span> <span class="pre">&lt;django.forms.fields.ChoiceField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#coldfront.core.project.forms.MemorandumSignedForm.declared_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.MemorandumSignedForm.media">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#coldfront.core.project.forms.MemorandumSignedForm.media" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all media required to render the widgets on this form.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.PIChoiceField">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">coldfront.core.project.forms.</span></span><span class="sig-name descname"><span class="pre">PIChoiceField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">queryset</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'---------'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">required</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">widget</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">help_text</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_field_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit_choices_to</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blank</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldfront.core.project.forms.PIChoiceField" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.PIChoiceField.label_from_instance">
+<span class="sig-name descname"><span class="pre">label_from_instance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldfront.core.project.forms.PIChoiceField.label_from_instance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert objects into strings and generate the labels for the choices
+presented by this object. Subclasses can override this method to
+customize the display of the choices.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.PooledProjectChoiceField">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">coldfront.core.project.forms.</span></span><span class="sig-name descname"><span class="pre">PooledProjectChoiceField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">queryset</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'---------'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">required</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">widget</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">help_text</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_field_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit_choices_to</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blank</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldfront.core.project.forms.PooledProjectChoiceField" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.PooledProjectChoiceField.label_from_instance">
+<span class="sig-name descname"><span class="pre">label_from_instance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldfront.core.project.forms.PooledProjectChoiceField.label_from_instance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert objects into strings and generate the labels for the choices
+presented by this object. Subclasses can override this method to
+customize the display of the choices.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ProjectAddUserForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">coldfront.core.project.forms.</span></span><span class="sig-name descname"><span class="pre">ProjectAddUserForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldfront.core.project.forms.ProjectAddUserForm" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ProjectAddUserForm.base_fields">
+<span class="sig-name descname"><span class="pre">base_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'email':</span> <span class="pre">&lt;django.forms.fields.EmailField</span> <span class="pre">object&gt;,</span> <span class="pre">'first_name':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'last_name':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'role':</span> <span class="pre">&lt;django.forms.models.ModelChoiceField</span> <span class="pre">object&gt;,</span> <span class="pre">'selected':</span> <span class="pre">&lt;django.forms.fields.BooleanField</span> <span class="pre">object&gt;,</span> <span class="pre">'source':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'user_access_agreement':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'username':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#coldfront.core.project.forms.ProjectAddUserForm.base_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ProjectAddUserForm.declared_fields">
+<span class="sig-name descname"><span class="pre">declared_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'email':</span> <span class="pre">&lt;django.forms.fields.EmailField</span> <span class="pre">object&gt;,</span> <span class="pre">'first_name':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'last_name':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'role':</span> <span class="pre">&lt;django.forms.models.ModelChoiceField</span> <span class="pre">object&gt;,</span> <span class="pre">'selected':</span> <span class="pre">&lt;django.forms.fields.BooleanField</span> <span class="pre">object&gt;,</span> <span class="pre">'source':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'user_access_agreement':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'username':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#coldfront.core.project.forms.ProjectAddUserForm.declared_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ProjectAddUserForm.media">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#coldfront.core.project.forms.ProjectAddUserForm.media" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all media required to render the widgets on this form.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ProjectAddUsersToAllocationForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">coldfront.core.project.forms.</span></span><span class="sig-name descname"><span class="pre">ProjectAddUsersToAllocationForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request_user</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">project_pk</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldfront.core.project.forms.ProjectAddUsersToAllocationForm" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ProjectAddUsersToAllocationForm.base_fields">
+<span class="sig-name descname"><span class="pre">base_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'allocation':</span> <span class="pre">&lt;django.forms.fields.MultipleChoiceField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#coldfront.core.project.forms.ProjectAddUsersToAllocationForm.base_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ProjectAddUsersToAllocationForm.declared_fields">
+<span class="sig-name descname"><span class="pre">declared_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'allocation':</span> <span class="pre">&lt;django.forms.fields.MultipleChoiceField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#coldfront.core.project.forms.ProjectAddUsersToAllocationForm.declared_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ProjectAddUsersToAllocationForm.media">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#coldfront.core.project.forms.ProjectAddUsersToAllocationForm.media" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all media required to render the widgets on this form.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ProjectReviewEmailForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">coldfront.core.project.forms.</span></span><span class="sig-name descname"><span class="pre">ProjectReviewEmailForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pk</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldfront.core.project.forms.ProjectReviewEmailForm" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ProjectReviewEmailForm.base_fields">
+<span class="sig-name descname"><span class="pre">base_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'cc':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'email_body':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#coldfront.core.project.forms.ProjectReviewEmailForm.base_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ProjectReviewEmailForm.declared_fields">
+<span class="sig-name descname"><span class="pre">declared_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'cc':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'email_body':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#coldfront.core.project.forms.ProjectReviewEmailForm.declared_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ProjectReviewEmailForm.media">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#coldfront.core.project.forms.ProjectReviewEmailForm.media" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all media required to render the widgets on this form.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ProjectReviewForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">coldfront.core.project.forms.</span></span><span class="sig-name descname"><span class="pre">ProjectReviewForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">project_pk</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldfront.core.project.forms.ProjectReviewForm" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ProjectReviewForm.base_fields">
+<span class="sig-name descname"><span class="pre">base_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'acknowledgement':</span> <span class="pre">&lt;django.forms.fields.BooleanField</span> <span class="pre">object&gt;,</span> <span class="pre">'reason':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#coldfront.core.project.forms.ProjectReviewForm.base_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ProjectReviewForm.declared_fields">
+<span class="sig-name descname"><span class="pre">declared_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'acknowledgement':</span> <span class="pre">&lt;django.forms.fields.BooleanField</span> <span class="pre">object&gt;,</span> <span class="pre">'reason':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#coldfront.core.project.forms.ProjectReviewForm.declared_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ProjectReviewForm.media">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#coldfront.core.project.forms.ProjectReviewForm.media" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all media required to render the widgets on this form.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ProjectReviewUserJoinForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">coldfront.core.project.forms.</span></span><span class="sig-name descname"><span class="pre">ProjectReviewUserJoinForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">files=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_id='id_%s'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_class=&lt;class</span> <span class="pre">'django.forms.utils.ErrorList'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_suffix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_permitted=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field_order=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_required_attribute=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">renderer=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldfront.core.project.forms.ProjectReviewUserJoinForm" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ProjectReviewUserJoinForm.base_fields">
+<span class="sig-name descname"><span class="pre">base_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'email':</span> <span class="pre">&lt;django.forms.fields.EmailField</span> <span class="pre">object&gt;,</span> <span class="pre">'first_name':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'last_name':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'reason':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'role':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'selected':</span> <span class="pre">&lt;django.forms.fields.BooleanField</span> <span class="pre">object&gt;,</span> <span class="pre">'username':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#coldfront.core.project.forms.ProjectReviewUserJoinForm.base_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ProjectReviewUserJoinForm.declared_fields">
+<span class="sig-name descname"><span class="pre">declared_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'email':</span> <span class="pre">&lt;django.forms.fields.EmailField</span> <span class="pre">object&gt;,</span> <span class="pre">'first_name':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'last_name':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'reason':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'role':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'selected':</span> <span class="pre">&lt;django.forms.fields.BooleanField</span> <span class="pre">object&gt;,</span> <span class="pre">'username':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#coldfront.core.project.forms.ProjectReviewUserJoinForm.declared_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ProjectReviewUserJoinForm.media">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#coldfront.core.project.forms.ProjectReviewUserJoinForm.media" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all media required to render the widgets on this form.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ProjectSearchForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">coldfront.core.project.forms.</span></span><span class="sig-name descname"><span class="pre">ProjectSearchForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">files=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_id='id_%s'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_class=&lt;class</span> <span class="pre">'django.forms.utils.ErrorList'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_suffix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_permitted=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field_order=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_required_attribute=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">renderer=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldfront.core.project.forms.ProjectSearchForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Search form for the Project list page.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ProjectSearchForm.CLUSTER_NAME">
+<span class="sig-name descname"><span class="pre">CLUSTER_NAME</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Cluster</span> <span class="pre">Name'</span></em><a class="headerlink" href="#coldfront.core.project.forms.ProjectSearchForm.CLUSTER_NAME" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ProjectSearchForm.CLUSTER_NAME_CHOICES">
+<span class="sig-name descname"><span class="pre">CLUSTER_NAME_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('',</span> <span class="pre">'-----'),</span> <span class="pre">('ABC',</span> <span class="pre">'ABC'),</span> <span class="pre">('Savio',</span> <span class="pre">'Savio'),</span> <span class="pre">('Vector',</span> <span class="pre">'Vector')]</span></em><a class="headerlink" href="#coldfront.core.project.forms.ProjectSearchForm.CLUSTER_NAME_CHOICES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ProjectSearchForm.FIELD_OF_SCIENCE">
+<span class="sig-name descname"><span class="pre">FIELD_OF_SCIENCE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'UCB</span> <span class="pre">Campus</span> <span class="pre">Division</span> <span class="pre">or</span> <span class="pre">Department'</span></em><a class="headerlink" href="#coldfront.core.project.forms.ProjectSearchForm.FIELD_OF_SCIENCE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ProjectSearchForm.LAST_NAME">
+<span class="sig-name descname"><span class="pre">LAST_NAME</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Last</span> <span class="pre">Name</span> <span class="pre">(PI)'</span></em><a class="headerlink" href="#coldfront.core.project.forms.ProjectSearchForm.LAST_NAME" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ProjectSearchForm.PROJECT_NAME">
+<span class="sig-name descname"><span class="pre">PROJECT_NAME</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Project</span> <span class="pre">Name'</span></em><a class="headerlink" href="#coldfront.core.project.forms.ProjectSearchForm.PROJECT_NAME" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ProjectSearchForm.PROJECT_TITLE">
+<span class="sig-name descname"><span class="pre">PROJECT_TITLE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Project</span> <span class="pre">Title'</span></em><a class="headerlink" href="#coldfront.core.project.forms.ProjectSearchForm.PROJECT_TITLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ProjectSearchForm.USERNAME">
+<span class="sig-name descname"><span class="pre">USERNAME</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Username</span> <span class="pre">(PI)'</span></em><a class="headerlink" href="#coldfront.core.project.forms.ProjectSearchForm.USERNAME" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ProjectSearchForm.base_fields">
+<span class="sig-name descname"><span class="pre">base_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'cluster_name':</span> <span class="pre">&lt;django.forms.fields.ChoiceField</span> <span class="pre">object&gt;,</span> <span class="pre">'last_name':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'project_name':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'project_title':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'show_all_projects':</span> <span class="pre">&lt;django.forms.fields.BooleanField</span> <span class="pre">object&gt;,</span> <span class="pre">'username':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#coldfront.core.project.forms.ProjectSearchForm.base_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ProjectSearchForm.declared_fields">
+<span class="sig-name descname"><span class="pre">declared_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'cluster_name':</span> <span class="pre">&lt;django.forms.fields.ChoiceField</span> <span class="pre">object&gt;,</span> <span class="pre">'last_name':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'project_name':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'project_title':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'show_all_projects':</span> <span class="pre">&lt;django.forms.fields.BooleanField</span> <span class="pre">object&gt;,</span> <span class="pre">'username':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#coldfront.core.project.forms.ProjectSearchForm.declared_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ProjectSearchForm.media">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#coldfront.core.project.forms.ProjectSearchForm.media" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all media required to render the widgets on this form.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ProjectUpdateForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">coldfront.core.project.forms.</span></span><span class="sig-name descname"><span class="pre">ProjectUpdateForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">files=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_id='id_%s'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_class=&lt;class</span> <span class="pre">'django.forms.utils.ErrorList'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_suffix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_permitted=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instance=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_required_attribute=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">renderer=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldfront.core.project.forms.ProjectUpdateForm" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py class">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ProjectUpdateForm.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="headerlink" href="#coldfront.core.project.forms.ProjectUpdateForm.Meta" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ProjectUpdateForm.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('title',</span> <span class="pre">'description')</span></em><a class="headerlink" href="#coldfront.core.project.forms.ProjectUpdateForm.Meta.fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ProjectUpdateForm.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#coldfront.core.project.forms.ProjectUpdateForm.Meta.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="models.html#coldfront.core.project.models.Project" title="coldfront.core.project.models.Project"><code class="xref py py-class docutils literal notranslate"><span class="pre">coldfront.core.project.models.Project</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ProjectUpdateForm.base_fields">
+<span class="sig-name descname"><span class="pre">base_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'description':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'title':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#coldfront.core.project.forms.ProjectUpdateForm.base_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ProjectUpdateForm.declared_fields">
+<span class="sig-name descname"><span class="pre">declared_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#coldfront.core.project.forms.ProjectUpdateForm.declared_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ProjectUpdateForm.media">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#coldfront.core.project.forms.ProjectUpdateForm.media" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all media required to render the widgets on this form.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ProjectUserUpdateForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">coldfront.core.project.forms.</span></span><span class="sig-name descname"><span class="pre">ProjectUserUpdateForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">files=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_id='id_%s'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_class=&lt;class</span> <span class="pre">'django.forms.utils.ErrorList'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_suffix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_permitted=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field_order=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_required_attribute=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">renderer=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldfront.core.project.forms.ProjectUserUpdateForm" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ProjectUserUpdateForm.base_fields">
+<span class="sig-name descname"><span class="pre">base_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'enable_notifications':</span> <span class="pre">&lt;django.forms.fields.BooleanField</span> <span class="pre">object&gt;,</span> <span class="pre">'role':</span> <span class="pre">&lt;django.forms.models.ModelChoiceField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#coldfront.core.project.forms.ProjectUserUpdateForm.base_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ProjectUserUpdateForm.declared_fields">
+<span class="sig-name descname"><span class="pre">declared_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'enable_notifications':</span> <span class="pre">&lt;django.forms.fields.BooleanField</span> <span class="pre">object&gt;,</span> <span class="pre">'role':</span> <span class="pre">&lt;django.forms.models.ModelChoiceField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#coldfront.core.project.forms.ProjectUserUpdateForm.declared_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ProjectUserUpdateForm.media">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#coldfront.core.project.forms.ProjectUserUpdateForm.media" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all media required to render the widgets on this form.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ReviewDenyForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">coldfront.core.project.forms.</span></span><span class="sig-name descname"><span class="pre">ReviewDenyForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">files=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_id='id_%s'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_class=&lt;class</span> <span class="pre">'django.forms.utils.ErrorList'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_suffix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_permitted=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field_order=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_required_attribute=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">renderer=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldfront.core.project.forms.ReviewDenyForm" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ReviewDenyForm.base_fields">
+<span class="sig-name descname"><span class="pre">base_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'justification':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#coldfront.core.project.forms.ReviewDenyForm.base_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ReviewDenyForm.declared_fields">
+<span class="sig-name descname"><span class="pre">declared_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'justification':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#coldfront.core.project.forms.ReviewDenyForm.declared_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ReviewDenyForm.media">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#coldfront.core.project.forms.ReviewDenyForm.media" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all media required to render the widgets on this form.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ReviewStatusForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">coldfront.core.project.forms.</span></span><span class="sig-name descname"><span class="pre">ReviewStatusForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">files=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_id='id_%s'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_class=&lt;class</span> <span class="pre">'django.forms.utils.ErrorList'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_suffix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_permitted=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field_order=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_required_attribute=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">renderer=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldfront.core.project.forms.ReviewStatusForm" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ReviewStatusForm.base_fields">
+<span class="sig-name descname"><span class="pre">base_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'justification':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'status':</span> <span class="pre">&lt;django.forms.fields.ChoiceField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#coldfront.core.project.forms.ReviewStatusForm.base_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ReviewStatusForm.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#coldfront.core.project.forms.ReviewStatusForm.clean" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook for doing any extra form-wide cleaning after Field.clean() has been
+called on every field. Any ValidationError raised by this method will
+not be associated with a particular field; it will have a special-case
+association with the field named ‘__all__’.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ReviewStatusForm.declared_fields">
+<span class="sig-name descname"><span class="pre">declared_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'justification':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'status':</span> <span class="pre">&lt;django.forms.fields.ChoiceField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#coldfront.core.project.forms.ReviewStatusForm.declared_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.ReviewStatusForm.media">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#coldfront.core.project.forms.ReviewStatusForm.media" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all media required to render the widgets on this form.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectAllocationTypeForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">coldfront.core.project.forms.</span></span><span class="sig-name descname"><span class="pre">SavioProjectAllocationTypeForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">files=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_id='id_%s'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_class=&lt;class</span> <span class="pre">'django.forms.utils.ErrorList'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_suffix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_permitted=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field_order=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_required_attribute=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">renderer=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectAllocationTypeForm" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectAllocationTypeForm.base_fields">
+<span class="sig-name descname"><span class="pre">base_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'allocation_type':</span> <span class="pre">&lt;django.forms.fields.ChoiceField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectAllocationTypeForm.base_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectAllocationTypeForm.declared_fields">
+<span class="sig-name descname"><span class="pre">declared_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'allocation_type':</span> <span class="pre">&lt;django.forms.fields.ChoiceField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectAllocationTypeForm.declared_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectAllocationTypeForm.media">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectAllocationTypeForm.media" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all media required to render the widgets on this form.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectDetailsForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">coldfront.core.project.forms.</span></span><span class="sig-name descname"><span class="pre">SavioProjectDetailsForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectDetailsForm" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectDetailsForm.base_fields">
+<span class="sig-name descname"><span class="pre">base_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'description':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'name':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'title':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectDetailsForm.base_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectDetailsForm.clean_name">
+<span class="sig-name descname"><span class="pre">clean_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectDetailsForm.clean_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectDetailsForm.declared_fields">
+<span class="sig-name descname"><span class="pre">declared_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'description':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'name':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'title':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectDetailsForm.declared_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectDetailsForm.media">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectDetailsForm.media" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all media required to render the widgets on this form.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectExistingPIForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">coldfront.core.project.forms.</span></span><span class="sig-name descname"><span class="pre">SavioProjectExistingPIForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectExistingPIForm" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectExistingPIForm.base_fields">
+<span class="sig-name descname"><span class="pre">base_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'PI':</span> <span class="pre">&lt;coldfront.core.project.forms.PIChoiceField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectExistingPIForm.base_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectExistingPIForm.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectExistingPIForm.clean" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook for doing any extra form-wide cleaning after Field.clean() has been
+called on every field. Any ValidationError raised by this method will
+not be associated with a particular field; it will have a special-case
+association with the field named ‘__all__’.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectExistingPIForm.declared_fields">
+<span class="sig-name descname"><span class="pre">declared_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'PI':</span> <span class="pre">&lt;coldfront.core.project.forms.PIChoiceField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectExistingPIForm.declared_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectExistingPIForm.media">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectExistingPIForm.media" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all media required to render the widgets on this form.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectExtraFieldsForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">coldfront.core.project.forms.</span></span><span class="sig-name descname"><span class="pre">SavioProjectExtraFieldsForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectExtraFieldsForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>A placeholder for extra fields for non-ICA/Recharge projects.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectExtraFieldsForm.base_fields">
+<span class="sig-name descname"><span class="pre">base_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectExtraFieldsForm.base_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectExtraFieldsForm.declared_fields">
+<span class="sig-name descname"><span class="pre">declared_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectExtraFieldsForm.declared_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectExtraFieldsForm.media">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectExtraFieldsForm.media" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all media required to render the widgets on this form.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectICAExtraFieldsForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">coldfront.core.project.forms.</span></span><span class="sig-name descname"><span class="pre">SavioProjectICAExtraFieldsForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectICAExtraFieldsForm" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectICAExtraFieldsForm.SEMESTER_CHOICES">
+<span class="sig-name descname"><span class="pre">SEMESTER_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('',</span> <span class="pre">'Select</span> <span class="pre">one...'),</span> <span class="pre">('Spring',</span> <span class="pre">'Spring'),</span> <span class="pre">('Summer',</span> <span class="pre">'Summer'),</span> <span class="pre">('Fall',</span> <span class="pre">'Fall'))</span></em><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectICAExtraFieldsForm.SEMESTER_CHOICES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectICAExtraFieldsForm.base_fields">
+<span class="sig-name descname"><span class="pre">base_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'manager_experience_description':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'max_simultaneous_jobs':</span> <span class="pre">&lt;django.forms.fields.IntegerField</span> <span class="pre">object&gt;,</span> <span class="pre">'max_simultaneous_nodes':</span> <span class="pre">&lt;django.forms.fields.IntegerField</span> <span class="pre">object&gt;,</span> <span class="pre">'num_gsis':</span> <span class="pre">&lt;django.forms.fields.IntegerField</span> <span class="pre">object&gt;,</span> <span class="pre">'num_students':</span> <span class="pre">&lt;django.forms.fields.IntegerField</span> <span class="pre">object&gt;,</span> <span class="pre">'semester':</span> <span class="pre">&lt;django.forms.fields.ChoiceField</span> <span class="pre">object&gt;,</span> <span class="pre">'student_experience_description':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'year':</span> <span class="pre">&lt;django.forms.fields.ChoiceField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectICAExtraFieldsForm.base_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectICAExtraFieldsForm.declared_fields">
+<span class="sig-name descname"><span class="pre">declared_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'manager_experience_description':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'max_simultaneous_jobs':</span> <span class="pre">&lt;django.forms.fields.IntegerField</span> <span class="pre">object&gt;,</span> <span class="pre">'max_simultaneous_nodes':</span> <span class="pre">&lt;django.forms.fields.IntegerField</span> <span class="pre">object&gt;,</span> <span class="pre">'num_gsis':</span> <span class="pre">&lt;django.forms.fields.IntegerField</span> <span class="pre">object&gt;,</span> <span class="pre">'num_students':</span> <span class="pre">&lt;django.forms.fields.IntegerField</span> <span class="pre">object&gt;,</span> <span class="pre">'semester':</span> <span class="pre">&lt;django.forms.fields.ChoiceField</span> <span class="pre">object&gt;,</span> <span class="pre">'student_experience_description':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'year':</span> <span class="pre">&lt;django.forms.fields.ChoiceField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectICAExtraFieldsForm.declared_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectICAExtraFieldsForm.media">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectICAExtraFieldsForm.media" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all media required to render the widgets on this form.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectNewPIForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">coldfront.core.project.forms.</span></span><span class="sig-name descname"><span class="pre">SavioProjectNewPIForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">files=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_id='id_%s'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_class=&lt;class</span> <span class="pre">'django.forms.utils.ErrorList'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_suffix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_permitted=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field_order=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_required_attribute=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">renderer=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectNewPIForm" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectNewPIForm.base_fields">
+<span class="sig-name descname"><span class="pre">base_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'email':</span> <span class="pre">&lt;django.forms.fields.EmailField</span> <span class="pre">object&gt;,</span> <span class="pre">'first_name':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'last_name':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'middle_name':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectNewPIForm.base_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectNewPIForm.clean_email">
+<span class="sig-name descname"><span class="pre">clean_email</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectNewPIForm.clean_email" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectNewPIForm.declared_fields">
+<span class="sig-name descname"><span class="pre">declared_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'email':</span> <span class="pre">&lt;django.forms.fields.EmailField</span> <span class="pre">object&gt;,</span> <span class="pre">'first_name':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'last_name':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'middle_name':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectNewPIForm.declared_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectNewPIForm.media">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectNewPIForm.media" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all media required to render the widgets on this form.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectPoolAllocationsForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">coldfront.core.project.forms.</span></span><span class="sig-name descname"><span class="pre">SavioProjectPoolAllocationsForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">files=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_id='id_%s'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_class=&lt;class</span> <span class="pre">'django.forms.utils.ErrorList'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_suffix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_permitted=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field_order=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_required_attribute=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">renderer=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectPoolAllocationsForm" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectPoolAllocationsForm.base_fields">
+<span class="sig-name descname"><span class="pre">base_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'pool':</span> <span class="pre">&lt;django.forms.fields.BooleanField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectPoolAllocationsForm.base_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectPoolAllocationsForm.declared_fields">
+<span class="sig-name descname"><span class="pre">declared_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'pool':</span> <span class="pre">&lt;django.forms.fields.BooleanField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectPoolAllocationsForm.declared_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectPoolAllocationsForm.media">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectPoolAllocationsForm.media" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all media required to render the widgets on this form.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectPooledProjectSelectionForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">coldfront.core.project.forms.</span></span><span class="sig-name descname"><span class="pre">SavioProjectPooledProjectSelectionForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectPooledProjectSelectionForm" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectPooledProjectSelectionForm.base_fields">
+<span class="sig-name descname"><span class="pre">base_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'project':</span> <span class="pre">&lt;coldfront.core.project.forms.PooledProjectChoiceField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectPooledProjectSelectionForm.base_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectPooledProjectSelectionForm.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectPooledProjectSelectionForm.clean" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook for doing any extra form-wide cleaning after Field.clean() has been
+called on every field. Any ValidationError raised by this method will
+not be associated with a particular field; it will have a special-case
+association with the field named ‘__all__’.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectPooledProjectSelectionForm.declared_fields">
+<span class="sig-name descname"><span class="pre">declared_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'project':</span> <span class="pre">&lt;coldfront.core.project.forms.PooledProjectChoiceField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectPooledProjectSelectionForm.declared_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectPooledProjectSelectionForm.media">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectPooledProjectSelectionForm.media" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all media required to render the widgets on this form.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectRechargeExtraFieldsForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">coldfront.core.project.forms.</span></span><span class="sig-name descname"><span class="pre">SavioProjectRechargeExtraFieldsForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectRechargeExtraFieldsForm" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectRechargeExtraFieldsForm.base_fields">
+<span class="sig-name descname"><span class="pre">base_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'campus_chartstring':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'chartstring_account_type':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'chartstring_contact_email':</span> <span class="pre">&lt;django.forms.fields.EmailField</span> <span class="pre">object&gt;,</span> <span class="pre">'chartstring_contact_name':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'num_service_units':</span> <span class="pre">&lt;django.forms.fields.IntegerField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectRechargeExtraFieldsForm.base_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectRechargeExtraFieldsForm.clean_num_service_units">
+<span class="sig-name descname"><span class="pre">clean_num_service_units</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectRechargeExtraFieldsForm.clean_num_service_units" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectRechargeExtraFieldsForm.declared_fields">
+<span class="sig-name descname"><span class="pre">declared_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'campus_chartstring':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'chartstring_account_type':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'chartstring_contact_email':</span> <span class="pre">&lt;django.forms.fields.EmailField</span> <span class="pre">object&gt;,</span> <span class="pre">'chartstring_contact_name':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'num_service_units':</span> <span class="pre">&lt;django.forms.fields.IntegerField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectRechargeExtraFieldsForm.declared_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectRechargeExtraFieldsForm.media">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectRechargeExtraFieldsForm.media" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all media required to render the widgets on this form.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectReviewAllocationDatesForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">coldfront.core.project.forms.</span></span><span class="sig-name descname"><span class="pre">SavioProjectReviewAllocationDatesForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">files=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_id='id_%s'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_class=&lt;class</span> <span class="pre">'django.forms.utils.ErrorList'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_suffix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_permitted=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field_order=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_required_attribute=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">renderer=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectReviewAllocationDatesForm" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectReviewAllocationDatesForm.base_fields">
+<span class="sig-name descname"><span class="pre">base_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'end_date':</span> <span class="pre">&lt;django.forms.fields.DateField</span> <span class="pre">object&gt;,</span> <span class="pre">'start_date':</span> <span class="pre">&lt;django.forms.fields.DateField</span> <span class="pre">object&gt;,</span> <span class="pre">'status':</span> <span class="pre">&lt;django.forms.fields.ChoiceField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectReviewAllocationDatesForm.base_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectReviewAllocationDatesForm.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectReviewAllocationDatesForm.clean" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook for doing any extra form-wide cleaning after Field.clean() has been
+called on every field. Any ValidationError raised by this method will
+not be associated with a particular field; it will have a special-case
+association with the field named ‘__all__’.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectReviewAllocationDatesForm.declared_fields">
+<span class="sig-name descname"><span class="pre">declared_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'end_date':</span> <span class="pre">&lt;django.forms.fields.DateField</span> <span class="pre">object&gt;,</span> <span class="pre">'start_date':</span> <span class="pre">&lt;django.forms.fields.DateField</span> <span class="pre">object&gt;,</span> <span class="pre">'status':</span> <span class="pre">&lt;django.forms.fields.ChoiceField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectReviewAllocationDatesForm.declared_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectReviewAllocationDatesForm.media">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectReviewAllocationDatesForm.media" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all media required to render the widgets on this form.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectReviewSetupForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">coldfront.core.project.forms.</span></span><span class="sig-name descname"><span class="pre">SavioProjectReviewSetupForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectReviewSetupForm" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectReviewSetupForm.base_fields">
+<span class="sig-name descname"><span class="pre">base_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'final_name':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'justification':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'status':</span> <span class="pre">&lt;django.forms.fields.ChoiceField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectReviewSetupForm.base_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectReviewSetupForm.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectReviewSetupForm.clean" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook for doing any extra form-wide cleaning after Field.clean() has been
+called on every field. Any ValidationError raised by this method will
+not be associated with a particular field; it will have a special-case
+association with the field named ‘__all__’.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectReviewSetupForm.clean_final_name">
+<span class="sig-name descname"><span class="pre">clean_final_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectReviewSetupForm.clean_final_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectReviewSetupForm.declared_fields">
+<span class="sig-name descname"><span class="pre">declared_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'final_name':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'justification':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'status':</span> <span class="pre">&lt;django.forms.fields.ChoiceField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectReviewSetupForm.declared_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectReviewSetupForm.media">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectReviewSetupForm.media" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all media required to render the widgets on this form.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectSurveyForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">coldfront.core.project.forms.</span></span><span class="sig-name descname"><span class="pre">SavioProjectSurveyForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectSurveyForm" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectSurveyForm.base_fields">
+<span class="sig-name descname"><span class="pre">base_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'cloud_computing':</span> <span class="pre">&lt;django.forms.fields.ChoiceField</span> <span class="pre">object&gt;,</span> <span class="pre">'computational_aspects':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'data_storage_space':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'existing_resources':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'interconnect':</span> <span class="pre">&lt;django.forms.fields.ChoiceField</span> <span class="pre">object&gt;,</span> <span class="pre">'io':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'large_memory_nodes':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'memory_per_core':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'network_to_internet':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'num_processor_cores':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'outside_server_db_access':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'processor_core_hours_year':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'run_time':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'scope_and_intent':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'software_source':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'system_needs':</span> <span class="pre">&lt;django.forms.fields.MultipleChoiceField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectSurveyForm.base_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectSurveyForm.declared_fields">
+<span class="sig-name descname"><span class="pre">declared_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'cloud_computing':</span> <span class="pre">&lt;django.forms.fields.ChoiceField</span> <span class="pre">object&gt;,</span> <span class="pre">'computational_aspects':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'data_storage_space':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'existing_resources':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'interconnect':</span> <span class="pre">&lt;django.forms.fields.ChoiceField</span> <span class="pre">object&gt;,</span> <span class="pre">'io':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'large_memory_nodes':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'memory_per_core':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'network_to_internet':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'num_processor_cores':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'outside_server_db_access':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'processor_core_hours_year':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'run_time':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'scope_and_intent':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'software_source':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'system_needs':</span> <span class="pre">&lt;django.forms.fields.MultipleChoiceField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectSurveyForm.declared_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.SavioProjectSurveyForm.media">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#coldfront.core.project.forms.SavioProjectSurveyForm.media" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all media required to render the widgets on this form.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.VectorProjectDetailsForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">coldfront.core.project.forms.</span></span><span class="sig-name descname"><span class="pre">VectorProjectDetailsForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">files=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_id='id_%s'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_class=&lt;class</span> <span class="pre">'django.forms.utils.ErrorList'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_suffix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_permitted=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field_order=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_required_attribute=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">renderer=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldfront.core.project.forms.VectorProjectDetailsForm" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.VectorProjectDetailsForm.base_fields">
+<span class="sig-name descname"><span class="pre">base_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'description':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'name':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'title':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#coldfront.core.project.forms.VectorProjectDetailsForm.base_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.VectorProjectDetailsForm.clean_name">
+<span class="sig-name descname"><span class="pre">clean_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#coldfront.core.project.forms.VectorProjectDetailsForm.clean_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.VectorProjectDetailsForm.declared_fields">
+<span class="sig-name descname"><span class="pre">declared_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'description':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'name':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'title':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#coldfront.core.project.forms.VectorProjectDetailsForm.declared_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.VectorProjectDetailsForm.media">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#coldfront.core.project.forms.VectorProjectDetailsForm.media" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all media required to render the widgets on this form.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.VectorProjectReviewSetupForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">coldfront.core.project.forms.</span></span><span class="sig-name descname"><span class="pre">VectorProjectReviewSetupForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#coldfront.core.project.forms.VectorProjectReviewSetupForm" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.VectorProjectReviewSetupForm.base_fields">
+<span class="sig-name descname"><span class="pre">base_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'final_name':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'justification':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'status':</span> <span class="pre">&lt;django.forms.fields.ChoiceField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#coldfront.core.project.forms.VectorProjectReviewSetupForm.base_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.VectorProjectReviewSetupForm.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#coldfront.core.project.forms.VectorProjectReviewSetupForm.clean" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook for doing any extra form-wide cleaning after Field.clean() has been
+called on every field. Any ValidationError raised by this method will
+not be associated with a particular field; it will have a special-case
+association with the field named ‘__all__’.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.VectorProjectReviewSetupForm.clean_final_name">
+<span class="sig-name descname"><span class="pre">clean_final_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#coldfront.core.project.forms.VectorProjectReviewSetupForm.clean_final_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.VectorProjectReviewSetupForm.declared_fields">
+<span class="sig-name descname"><span class="pre">declared_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'final_name':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'justification':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'status':</span> <span class="pre">&lt;django.forms.fields.ChoiceField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#coldfront.core.project.forms.VectorProjectReviewSetupForm.declared_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="coldfront.core.project.forms.VectorProjectReviewSetupForm.media">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#coldfront.core.project.forms.VectorProjectReviewSetupForm.media" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all media required to render the widgets on this form.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Coldfront</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2022, ucbrit.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.5.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/modules/forms.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

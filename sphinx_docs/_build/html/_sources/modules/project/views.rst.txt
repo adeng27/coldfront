@@ -1,0 +1,6 @@
+Project Views
+=============
+
+.. automodule:: coldfront.core.project.views
+   :members:
+   :undoc-members:
